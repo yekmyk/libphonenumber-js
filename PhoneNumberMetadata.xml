@@ -27692,5 +27692,47 @@
       </premiumRate>
     </territory>
 
+     <!-- Virtual -->
+    <territory id="VIR" countryCode="28" internationalPrefix="00" nationalPrefix="0"
+               nationalPrefixOptionalWhenFormatting="true" mobileNumberPortableRegion="true">
+      <availableFormats>
+        <numberFormat pattern="(\d{3})(\d{3})(\d{4})" nationalPrefixFormattingRule="$NP$FG">
+          <leadingDigits>
+            (?:
+              835|
+              235|
+              862|
+              935|
+              695
+            )
+          </leadingDigits>
+          <format>$1 $2 $3</format>
+        </numberFormat>
+      </availableFormats>
+      <generalDesc>
+        <nationalNumberPattern>
+          (?:
+            835|
+            235|
+            862|
+            935|
+            695
+          )\d{7}
+        </nationalNumberPattern>
+      </generalDesc>
+      <mobile>
+        <possibleLengths national="10"/>
+        <exampleNumber>8351234567</exampleNumber>
+        <nationalNumberPattern>
+          (?:
+            835|
+            235|
+            862|
+            935|
+            695
+          )\d{7}
+        </nationalNumberPattern>
+      </mobile>
+    </territory>
   </territories>
 </phoneNumberMetadata>
